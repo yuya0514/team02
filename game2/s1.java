@@ -15,6 +15,20 @@ public class s1 extends Actor
     public void act() 
     {
         getImage().scale( 120, 60 );
+        int x = getX();
+        int y = getY();
+        if( Greenfoot.isKeyDown( "left" ) ){
+           setLocation( x-3,y );
+        }
+        if( Greenfoot.isKeyDown( "right" ) ){
+           setLocation( x+3,y );
+        }
+        if( Greenfoot.isKeyDown( "up" ) ){
+           setLocation( x,y-3 );
+        }
+        if( Greenfoot.isKeyDown( "down" ) ){
+            setLocation( x,y+3 );
+        }
         // Add your action code here.
     }    
 }
